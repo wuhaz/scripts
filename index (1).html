@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro X</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            background-color: #161b22;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background-color: #0d1117;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        .downloads {
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .downloads h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .download-options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-option {
+            width: calc(33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #161b22;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-option h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #58a6ff;
+        }
+
+        .download-option p {
+            font-size: 1em;
+            color: #c9d1d9;
+            margin-bottom: 15px;
+        }
+
+        .get-script-button {
+            background-color: #0366d6;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .get-script-button:hover {
+            background-color: #0645ad;
+        }
+
+        .footer {
+            background-color: #161b22;
+            color: #c9d1d9;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Neuro X</h1>
+            <p>We Distribute Exploits For More Than Just Roblox.</p>
+        </div>
+
+        <div class="section">
+            <h2>Info</h2>
+            <p>Neuro X Is a Universal Script Service, Most Common FPS Games.</p>
+        </div>
+
+        <div class="downloads">
+            <h2>Exploits</h2>
+            <div class="download-options">
+                <div class="download-option">
+                    <h3>Riley hub V3</h3>
+                    <p>Roblox Only.</p>
+                    <div class="get-script-button" data-text="Script 1">Get Script</div>
+                </div>
+                <div class="download-option">
+                    <h3>Axoim</h3>
+                    <p>Roblox & CSGO.</p>
+                    <div class="get-script-button" data-text="Script 2">Get Script</div>
+                </div>
+                <div class="download-option">
+                    <h3>Neuro X</h3>
+                    <p>Most Powerful Universal FPS Shooter Scipt.</p>
+                    <div class="get-script-button" data-text="Script 3">Get Script</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Neuro X. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.get-script-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const text = button.getAttribute('data-text');
+                copyToClipboard(text);
+            });
+        });
+
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.setAttribute('readonly', '');
+            textarea.style.position = 'absolute';
+            textarea.style.left = '-9999px';
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Text copied to clipboard: ' + text);
+        }
+    </script>
+</body>
+</html>
